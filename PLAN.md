@@ -128,3 +128,9 @@ check again.
   - Updated project health tracker (dep audit: yes, 0 npm vulnerabilities)
 - **Deferred:** Cloudflare API token rotation (manual action, flagged to user). Ranking chart CONTAINER_WIDTH hardcode (cosmetic, viewBox handles scaling). AppView type rename (correct for usage, not worth renaming per project rules).
 - **Next review:** 2026-07-04
+
+### 2026-09-23 — Audit (health check only)
+- **Findings:** 1 critical, 3 important, 4 nice-to-have
+- **Top concerns:** The live 24-month trajectory chart labels points M1–M24 but each point is an annualized contribution (projectTrajectory / project_trajectory scale annual revenue), so the "monthly" figures read ~12x too large. CI never runs the 87 Vitest tests or the engine unit tests and deploy is not gated on tests; client mode accepts rate columns with no upper bound (25 instead of 0.25 passes preflight). README, HANDOFF (last entry 2026-06-25) and this file's review date are stale. Automated /security-review, /ce:review and data-science-reviewer replaced by a manual pass.
+- **Action taken:** Audit only — no fixes this session
+- **Next review:** 2026-12-22

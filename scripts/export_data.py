@@ -20,7 +20,7 @@ Run from project root:
 
 With live Postgres (flyctl proxy must be running on localhost:5432):
     flyctl proxy 5432 -a cinderhaven-data-platform &
-    python scripts/export_data.py
+    ALLOW_PROD_DB=1 python scripts/export_data.py
 """
 
 import json
@@ -33,6 +33,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from engine.cost_model import calculate_contributions
 from engine.types import RetailerInput
+
+import prod_guard  # vendored in scripts/; refuses a fly tunnel to production
 
 try:
     import psycopg2
@@ -373,6 +375,7 @@ def _pg_connect():
         return None
     dsn = os.environ.get("DATABASE_URL")
     if dsn:
+        prod_guard.check(dsn)  # outside the try: a refusal must not fall back to snapshot
         try:
             return psycopg2.connect(dsn)
         except Exception as e:
@@ -381,6 +384,7 @@ def _pg_connect():
     pw = os.environ.get("POSTGRES_PASSWORD")
     if not pw:
         return None
+    prod_guard.check(host="localhost", port=5432)
     try:
         return psycopg2.connect(
             host="localhost", port=5432, dbname="cinderhaven",

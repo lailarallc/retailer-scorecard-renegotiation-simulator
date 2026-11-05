@@ -57,7 +57,7 @@ True contribution = gross revenue minus six operational layers, each attributed 
 
 #### The Margin Math
 
-For a $25M demo brand, the typical reveal: the anchor retailer at ~21% of retail revenue (Walmart, $3.6M/yr) runs at *negative* true contribution once 60-day terms (~$71K/yr working-capital drag at blended cost of capital), trade spend, deduction leakage, and compliance labor are loaded in. The CEO has been subsidizing their biggest customer with the margin from their smallest ones. The simulator then sizes the fix three ways: the *flip* (terms 60→45 + 2 pts of trade spend swings it six figures positive), the *trajectory* (left alone, the loss compounds to $X over 24 months as the account grows), and the *redeployment* (walking frees $Y cash + Z% capacity, net +$W when reapplied to profitable accounts). Three numbers the CEO has never had: what it costs, what it'll cost, and what to do about it.
+For a $25M demo brand, the typical reveal: the anchor retailer at ~21% of retail revenue (national mass retailer, $3.6M/yr) runs at *negative* true contribution once 60-day terms (~$71K/yr working-capital drag at blended cost of capital), trade spend, deduction leakage, and compliance labor are loaded in. The CEO has been subsidizing their biggest customer with the margin from their smallest ones. The simulator then sizes the fix three ways: the *flip* (terms 60→45 + 2 pts of trade spend swings it six figures positive), the *trajectory* (left alone, the loss compounds to $X over 24 months as the account grows), and the *redeployment* (walking frees $Y cash + Z% capacity, net +$W when reapplied to profitable accounts). Three numbers the CEO has never had: what it costs, what it'll cost, and what to do about it.
 
 #### Before / After
 

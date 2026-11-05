@@ -80,7 +80,7 @@ before building.
 
 **Why:** Full /ce:work execution of the implementation plan. U1–U7 represent Phase 1 (data foundation) + Phase 2 (core interactive) of the phased delivery plan.
 
-**State:** App builds cleanly (275KB JS / 24KB CSS). 81 tests passing (Python engine + TypeScript engine + domain logic). Two garbled untracked files in frontend/public/fonts/ need `git clean -f` removal — harmless, do not commit. U8 (design polish + Cloudflare Pages deployment) is the only remaining unit. Ranking inversion confirmed: Walmart #1 gross → #7 contribution (net -$106K). .gitignore updated to cover .wrangler/ and dist/.
+**State:** App builds cleanly (275KB JS / 24KB CSS). 81 tests passing (Python engine + TypeScript engine + domain logic). Two garbled untracked files in frontend/public/fonts/ need `git clean -f` removal — harmless, do not commit. U8 (design polish + Cloudflare Pages deployment) is the only remaining unit. Ranking inversion confirmed: National mass retailer #1 gross → #7 contribution (net -$106K). .gitignore updated to cover .wrangler/ and dist/.
 
 **Next:** New session → U8: run CSS token audit (`grep -r '#[0-9a-fA-F]' frontend/src --include='*.css'`), add responsive breakpoints where missing, confirm `prefers-reduced-motion` is honored, then `wrangler pages deploy` from frontend/dist/.
 
@@ -116,7 +116,7 @@ before building.
 
 **Why:** KeHE is a distributor, not a retailer. R6 requires distributor costs folded into the retailers they serve. Having KeHE as its own row double-counted its margin and misrepresented the portfolio.
 
-**State:** All 8 units complete. KeHE fix applied. 93 tests passing (16 Python + 77 TypeScript). Frontend builds clean (276KB JS / 25KB CSS). New inversion story: Walmart #1 gross → #6 contribution (net -$106K), Costco #5 gross → #1 contribution ($729K). FAILURES.md updated. Deployed site at retailer-scorecard.lailarallc.com is stale (pre-fix).
+**State:** All 8 units complete. KeHE fix applied. 93 tests passing (16 Python + 77 TypeScript). Frontend builds clean (276KB JS / 25KB CSS). New inversion story: National mass retailer #1 gross → #6 contribution (net -$106K), club retailer #5 gross → #1 contribution ($729K). FAILURES.md updated. Deployed site at retailer-scorecard.lailarallc.com is stale (pre-fix).
 
 **Next:** Redeploy to Cloudflare Pages, push to GitHub, run /ce:review, run /ce:compound.
 

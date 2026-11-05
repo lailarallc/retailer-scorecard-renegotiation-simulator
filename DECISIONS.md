@@ -108,7 +108,7 @@ Each entry:
   and cannot sum to > 100%. The brief explicitly states the anchor retailer
   "runs at negative true contribution." Including `cogs_rate` resolves this:
   `gross_margin = gross_revenue × (1 - cogs_rate)`, then
-  `true_contribution = gross_margin - total_cost_layers`. Walmart at 55% COGS
+  `true_contribution = gross_margin - total_cost_layers`. The national mass retailer at 55% COGS
   + 28% trade spend + 8.2% deductions produces -$106K. Both the Python engine
   and TypeScript engine implement this formula, cross-validated via shared
   fixtures.
